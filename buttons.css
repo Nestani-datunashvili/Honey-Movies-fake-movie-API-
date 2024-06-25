@@ -1,0 +1,42 @@
+:root {
+  --primaryColor: #f8b319;
+  --secondaryColor: #000;
+  --color1: #f9f9f9;
+  --inputbgcolor: #f9f9f91a;
+}
+
+.watchlist {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  padding: 19px 25px;
+  font-size: 18px;
+  border: none;
+  border-radius: 15px;
+  background-color: #f9f9f933;
+  color: var(--color1);
+  transition: transform 0.5s ease;
+}
+.watchlist img {
+  width: 17px;
+  height: 17px;
+}
+
+.watchnow {
+  background-color: var(--primaryColor);
+  border: none;
+  padding: 19px 47px;
+  font-size: 18px;
+  border: none;
+  border-radius: 15px;
+  transition: transform 0.5s ease;
+}
+
+.watchlist:hover,
+.watchnow:hover,
+.plus_btn:hover,
+.more_btn:hover {
+  transform: scale(1.1);
+  background-color: var(--secondaryColor);
+  color: var(--primaryColor);
+}

@@ -1,0 +1,467 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --primaryColor: #f8b319;
+  --secondaryColor: #000;
+  --color1: #f9f9f9;
+  --inputbgcolor: #f9f9f91a;
+}
+
+/* ----------------navigation--------- */
+nav {
+  padding: 66px 116px 0px 116px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--secondaryColor);
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color1);
+}
+
+.navigation-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.navigation-list a {
+  font-size: 24px;
+  cursor: pointer;
+  font-weight: 600px;
+  line-height: 24px;
+}
+
+#main-navigation-item {
+  color: var(--primaryColor);
+  position: relative;
+}
+
+#main-navigation-item::after {
+  content: "";
+  height: 4px;
+  width: 116px;
+  position: absolute;
+  background-color: var(--primaryColor);
+  bottom: -14px;
+  right: 50%;
+  transform: translate(50%);
+}
+
+.logo {
+  width: 176px;
+  height: 74px;
+  cursor: pointer;
+}
+
+form {
+  position: relative;
+}
+
+#input {
+  width: 315px;
+  height: 56px;
+  background-color: var(--inputbgcolor);
+  color: var(--color1);
+  border: none;
+  border-radius: 12px;
+  padding: 19px 25px 19px 64px;
+}
+
+.filter-icon {
+  position: absolute;
+  right: 25px;
+  top: 15px;
+  cursor: pointer;
+}
+
+.search-icon {
+  position: absolute;
+  left: 25px;
+  top: 15px;
+  cursor: pointer;
+}
+
+.search_list {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  width: 315px;
+  max-height: 500px;
+  overflow-y: scroll;
+  z-index: 10;
+}
+
+.search_list_item,
+.search_list {
+  background-color: var(--primaryColor);
+
+  cursor: pointer;
+  border-radius: 0 0 10px 10px;
+}
+
+.search_list_item {
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+}
+.search_item_img img {
+  width: 80px;
+}
+
+.hide_search_list {
+  display: none;
+}
+
+/* ===========Search result ======== */
+
+.movie_section {
+  width: 100wv;
+  height: 100vh;
+  padding: 100px;
+  background: #000000b1;
+  background-repeat: no-repeat;
+  background-blend-mode: darken;
+  background-size: 100vw;
+  background-position: center;
+}
+
+.back a {
+  text-decoration: none;
+  color: #f9f9f9;
+  display: flex;
+  align-items: center;
+}
+
+.back a img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+.content_container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.movie_title {
+  color: var(--color1);
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.imdb {
+  width: 50px;
+  height: 20px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin: 100px;
+}
+
+.movie_plot {
+  width: 500px;
+  color: var(--color1);
+  font-size: 18px;
+  text-align: justify;
+}
+
+.movie_btn {
+  display: flex;
+  gap: 50px;
+}
+
+.watchlist {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  padding: 19px 25px;
+  font-size: 18px;
+  border: none;
+  border-radius: 15px;
+  background-color: #f9f9f933;
+  color: var(--color1);
+  cursor: pointer;
+}
+.watchlist img {
+  width: 17px;
+  height: 17px;
+  cursor: pointer;
+}
+
+.watchnow {
+  background-color: var(--primaryColor);
+  border: none;
+  padding: 19px 47px;
+  font-size: 18px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.poster {
+  border-radius: 20px;
+  width: 452px;
+  height: 568px;
+  box-shadow: 2px 2px 3px var(--secondaryColor);
+  cursor: pointer;
+}
+/* ---------Section1-------- */
+
+.section1 {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 120px;
+}
+
+.search_item_info {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.search_item_info h4,
+.search_item_info p {
+  color: var(--secondaryColor);
+  text-align: center;
+  font-weight: 600;
+}
+
+/* -----------Aside */
+
+.section1 {
+  background-color: var(--secondaryColor);
+  background-image: url(./img/back.png);
+  background-repeat: no-repeat;
+  background-position: left 20px bottom 10px;
+}
+
+.aside-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+#aside-list-title {
+  color: #f9f9f9ab;
+}
+
+.aside-icon {
+  margin-right: 15px;
+}
+
+/* ------------Section 2 carusel --------------- */
+
+.slider {
+  width: 770px;
+  height: 350px;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 350px;
+  border-radius: 20px;
+}
+
+.slider_title {
+  font-size: 40px;
+  line-height: 48px;
+  margin-top: 40px;
+  color: var(--color1);
+}
+
+.slider_btns {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 250px;
+}
+
+.slider_content {
+  flex-direction: column;
+  height: 350px;
+}
+
+/* ---------static Movie cards section----- */
+
+.movie_card-title {
+  color: #f9f9f9;
+  margin: 60px 0 30px 0;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.card_cintainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 237px;
+  height: 298px;
+  border-radius: 20px;
+  padding: 20px 10px 10px 10px;
+  transition: transform 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.card_cintainer:hover {
+  transform: scale(1.1);
+}
+h4 {
+  color: var(--color1);
+}
+
+h5 {
+  color: #f9f9f9b2;
+}
+.card_title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card_btn {
+  display: flex;
+  justify-content: space-between;
+}
+
+.plus_btn {
+  background-color: #f9f9f933;
+  color: #f9f9f9;
+  border: none;
+  border-radius: 15px;
+  transition: transform 0.5s ease;
+}
+.more_btn {
+  width: 150px;
+  height: 57px;
+  background-color: var(--primaryColor);
+  color: var(--secondaryColor);
+  font-size: 18px;
+  font-weight: 800px;
+  line-height: 18px;
+  border: none;
+  border-radius: 15px;
+  transition: transform 0.5s ease;
+}
+
+.first {
+  background-image: url(./img/loki.png);
+}
+
+.second {
+  background-image: url(./img/chernobil.png);
+}
+.third {
+  background-image: url(./img/riki.png);
+}
+
+/* ===================Most rated card section----- */
+
+.most_rated {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  height: fit-content;
+  background-color: var(--secondaryColor);
+  padding: 110px;
+}
+
+.most_rated_title {
+  color: var(--color1);
+  font-size: 48px;
+  line-height: 48px;
+  background-color: var(--secondaryColor);
+  margin: 0;
+  padding: 30px 110px;
+}
+
+.toprated-cards {
+  width: 295px;
+  height: fit-content;
+  transition: transform 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.toprated-cards:hover {
+  transform: scale(1.1);
+}
+
+.ratedcard_container {
+  border-radius: 17px, 17px, 0px, 0px;
+}
+
+.ratedcard_img {
+  width: 295px;
+  height: 320px;
+  position: relative;
+  border-radius: 17px, 17px, 0px, 0px;
+}
+
+.ratedcard_img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 17px, 17px, 0px, 0px;
+}
+.rating {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--primaryColor);
+  width: 77px;
+  height: 38px;
+  border-radius: 0px 17px 0px 17px;
+}
+
+.rating h6 {
+  margin: 0 auto;
+  font-size: 18px;
+  line-height: 27.6px;
+  text-align: center;
+  padding: 7px 23px;
+}
+
+.ratedcard_content {
+  width: 296px;
+  height: 150px;
+  background-color: var(--secondaryColor);
+  color: var(--color1);
+  position: relative;
+  transition: background-color 0.5s ease-in;
+}
+
+.ratedcard_content:hover {
+  background-color: var(--primaryColor);
+  color: var(--secondaryColor);
+}
+
+.ratedcard_title {
+  font-size: 20px;
+  font-weight: 800;
+  padding-top: 5px;
+}
+
+.ratedcard_description {
+  font-size: 13px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <title>Honey Movies</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./media_query.css">
+    <link rel="stylesheet" href="./buttons.css">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="">
+        <img class="logo" src="./img/Logo.png" alt="logo" />
+
+        </a>
+        <div class="burger-menu" id="burger-menu" >
+          <div class="burger-menu-line"></div>
+          <div class="burger-menu-line"></div>
+          <div class="burger-menu-line"></div>
+        </div>
+        <ul class="navigation-list open">
+          <li><a id="main-navigation-item" href="#">Movies</a></li>
+          <li><a href="#">TV Shows</a></li>
+          <li><a href="#">Anime</a></li>
+        </ul>
+        <form action="">
+          <input type="search" name="" id="input" placeholder="Search" onkeyup="findMovies()"/>
+          <img class="filter-icon" src="./img/Filter.png" alt="" />
+          <img class="search-icon" src="./img/Search....png" alt="" />
+
+          <div class="search_list">
+          <!-- <div class="search_list_item">
+            <div class="search_item_img">
+              <img src="./img/HD-wallpaper-movie-dune-2021.jpeg" alt="">
+            </div>
+            <div class="search_item_info">
+              <h4>dune</h4>
+              <p>2024</p>
+            </div>
+          </div> -->
+
+
+          </div>
+        </form>
+
+        
+
+      </nav>
+    </header>
+
+     <!-- ------------search Result-------------- -->
+
+<section id="movie" class="movie_section hide_search_list">
+  <!-- <button class="watchlist back">
+    <a href="./index.html"
+      ><img src="./img/btn - Previous.png" alt="" />Go back
+    </a>
+  </button>
+  <div class="content_container">
+            <div class="content">
+              <h6 class="movie_title">${
+                details.Title || "Title not available"
+              }</h6>
+              <h5 class="movie_title">${
+                details.Rated || "Rated not available"
+              }</h5>
+              <img class="imdb" src="./img/imdb.png" alt="" />
+              <p class="movie_plot">
+              ${details.Plot || "Plot not available"}
+              </p>
+              <div class="movie_btn">
+                <button class="watchlist">
+                  <img src="./img/plus.png" alt="" />Watchlist
+                </button>
+                <button class="watchnow">Watch Now</button>
+              </div>
+            </div>
+            <a href="#movie"><img
+              class="poster"
+              src="${
+                details.Poster !== "N/A" ? details.Poster : `image not found`
+              }"
+              alt="movie-poster"
+            /></a> -->
+</div>
+</section>
+    <!-- -----------------  section 1---------- -->
+
+    <section class="section1">
+      <!-- -----------------  aside---------- -->
+      <aside>
+        <ul class="aside-list">
+          <li><a id="aside-list-title" id="home" href="menu">Menu</a></li>
+          <li>
+            <a href=""
+              ><img class="aside-icon" src="./img/Icon.png" alt="home" />Home</a
+            >
+          </li>
+          <li>
+            <a href=""
+              ><img
+                class="aside-icon"
+                src="./img/Discover.png"
+                alt="discover"
+              />Discover</a
+            >
+          </li>
+          <li>
+            <a href=""
+              ><img
+                class="aside-icon"
+                src="./img/Union.png"
+                alt="awards"
+              />Awards</a
+            >
+          </li>
+          <li>
+            <a href=""
+              ><img
+                class="aside-icon"
+                src="./img/Celebrities.png"
+                alt="celebrites"
+              />Celebrites</a
+            >
+          </li>
+        </ul>
+
+        <ul class="aside-list">
+          <li><a id="aside-list-title" href="">Library</a></li>
+          <li>
+            <a href=""
+              ><img class="aside-icon" src="./img/Recent.png" alt="" />Recent</a
+            >
+          </li>
+          <li>
+            <a href=""
+              ><img class="aside-icon" src="./img/Top Rated.png" alt="" />Top
+              Rated</a
+            >
+          </li>
+          <li>
+            <a href=""
+              ><img
+                class="aside-icon"
+                src="./img/Downloaded.png"
+                alt=""
+              />Downloaded</a
+            >
+          </li>
+          <li>
+            <a href=""
+              ><img
+                class="aside-icon"
+                src="./img/Playlists.png"
+                alt=""
+              />Playlists</a
+            >
+          </li>
+          <li>
+            <a href=""
+              ><img
+                class="aside-icon"
+                src="./img/Watchlist.png"
+                alt=""
+              />Watchlist</a
+            >
+          </li>
+          <li>
+            <a href=""
+              ><img
+                class="aside-icon"
+                src="./img/Completed.png"
+                alt=""
+              />Completed</a
+            >
+          </li>
+        </ul>
+
+        <ul class="aside-list">
+          <li><a id="aside-list-title" href="">General</a></li>
+          <li>
+            <a href=""
+              ><img
+                class="aside-icon"
+                src="./img/Settings.png"
+                alt=""
+              />Settings</a
+            >
+          </li>
+          <li>
+            <a href=""
+              ><img class="aside-icon" src="./img/Log Out.png" alt="" />Log
+              Out</a
+            >
+          </li>
+        </ul>
+      </aside>
+
+      <!-- ------------Section 2 carusel --------------- -->
+      <section class="movie">
+        <!-- -----------carusel------- -->
+
+        <div id="carouselExampleIndicators" class="carousel slide slider container-fluid">
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="./img/Picture.png" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-flex slider_content ">
+                <h5 class="slider_title position-absolute ">The Crown</h5>
+                <div class="slider_btns ">
+                    <button class="watchlist">
+                        <img src="./img/plus.png" alt="icon" /> Watchlist
+                      </button>
+                      <button class="watchnow">Watch Now</button>
+            </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="./img/HD-wallpaper-movie-dune-2021.jpeg" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-flex slider_content ">
+                <h5 class="slider_title position-absolute ">Dune</h5>
+                <div class="slider_btns ">
+                    <button class="watchlist">
+                        <img src="./img/plus.png" alt="icon" /> Watchlist
+                      </button>
+                      <button class="watchnow">Watch Now</button>
+            </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="./img/sevenkings.webp" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-flex slider_content ">
+                <h5 class="slider_title position-absolute ">Seven Kings</h5>
+                <div class="slider_btns ">
+                    <button class="watchlist">
+                        <img src="./img/plus.png" alt="icon" /> Watchlist
+                      </button>
+                      <button class="watchnow">Watch Now</button>
+            </div>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"><img src="./img/btn - Previous.png" alt=""></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"><img src="./img/btn - Next.png" alt=""></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+
+        <div class="movie_card">
+          <h2 class="movie_card-title">Movies</h2>
+
+          <div class="cards container-fluid">
+            <!-- ----card1-------- -->
+            <div class="card_cintainer first">
+              <div class="card_section1">
+                <h4>Loki</h4>
+                <img src="./img/Review.png" alt="" />
+              </div>
+              <div class="card_section2">
+                <div class="card_title">
+                  <h5>6 Ep</h5>
+                  <h5>Superhero</h5>
+                </div>
+                <div class="card_btn">
+                  <button class="plus_btn">
+                    <img src="./img/Add to Watchlist.png" alt="" />
+                  </button>
+                  <button class="more_btn">More info</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- ----card2-------- -->
+            <div class="card_cintainer second">
+              <div class="card_section1">
+                <h4>Chernobyl</h4>
+                <img src="./img/Review.png" alt="" />
+              </div>
+              <div class="card_section2">
+                <div class="card_title">
+                  <h5>6 Ep</h5>
+                  <h5>Documetary</h5>
+                </div>
+                <div class="card_btn">
+                  <button class="plus_btn">
+                    <img src="./img/Add to Watchlist.png" alt="" />
+                  </button>
+                  <button class="more_btn">More info</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- ----card3-------- -->
+            <div class="card_cintainer third">
+              <div class="card_section1">
+                <h4>Rick and Morty</h3>
+                <img src="./img/Review.png" alt="" />
+              </div>
+              <div class="card_section2">
+                <div class="card_title">
+                  <h5>6 Ep</h5>
+                  <h5>Animation</h5>
+                </div>
+                <div class="card_btn">
+                  <button class="plus_btn">
+                    <img src="./img/Add to Watchlist.png" alt="" />
+                  </button>
+                  <button class="more_btn">More info</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+     
+    </section>
+
+
+
+<!-- ------------Most rated card section -------------- -->
+<section class="section2">
+  <h2 class="most_rated_title">Top Rated Movies</h2>
+
+<div class="most_rated">
+
+  <!-- <div class="toprated-cards">
+     <div class="ratedcard_container">
+        <div class="ratedcard_img">
+          <div class="rating"><h6>${data.imdbRating}</h6></div>
+          <img src="${data.Poster}" alt="" />
+        </div>
+        <div class="ratedcard_content">
+          <h3 class="ratedcard_title">${data.Title}</h3>
+          <p class="ratedcard_description">${data.Year}</p>
+          <p class="ratedcard_description">${data.Plot}</p>
+        </div>
+      </div>
+  </div>  -->
+</div>
+</section>
+
+
+
+<script src="./script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
